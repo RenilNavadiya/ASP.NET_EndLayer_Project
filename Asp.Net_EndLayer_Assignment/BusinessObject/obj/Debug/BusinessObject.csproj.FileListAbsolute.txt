@@ -1,0 +1,5 @@
+D:\Class Recordings & Assignments\Assignments\Asp.Net_EndLayer_Assignment\BusinessObject\bin\Debug\BusinessObject.dll
+D:\Class Recordings & Assignments\Assignments\Asp.Net_EndLayer_Assignment\BusinessObject\bin\Debug\BusinessObject.pdb
+D:\Class Recordings & Assignments\Assignments\Asp.Net_EndLayer_Assignment\BusinessObject\obj\Debug\BusinessObject.csproj.CoreCompileInputs.cache
+D:\Class Recordings & Assignments\Assignments\Asp.Net_EndLayer_Assignment\BusinessObject\obj\Debug\BusinessObject.dll
+D:\Class Recordings & Assignments\Assignments\Asp.Net_EndLayer_Assignment\BusinessObject\obj\Debug\BusinessObject.pdb
