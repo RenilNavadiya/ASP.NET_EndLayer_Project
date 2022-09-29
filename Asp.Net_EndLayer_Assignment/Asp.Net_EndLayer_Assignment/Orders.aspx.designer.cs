@@ -69,6 +69,15 @@ namespace Asp.Net_EndLayer_Assignment
         protected global::System.Web.UI.WebControls.DropDownList ddlCustomerId;
 
         /// <summary>
+        /// CustomerIdDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource CustomerIdDataSource;
+
+        /// <summary>
         /// ddlSalesmanId control.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace Asp.Net_EndLayer_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSalesmanId;
+
+        /// <summary>
+        /// SalesmanIdDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SalesmanIdDataSource;
 
         /// <summary>
         /// SubmitButton control.
@@ -130,24 +148,6 @@ namespace Asp.Net_EndLayer_Assignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-
-        /// <summary>
-        /// SalesmanIdDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SalesmanIdDataSource;
-
-        /// <summary>
-        /// CustomerIdDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource CustomerIdDataSource;
 
         /// <summary>
         /// gvOrder control.

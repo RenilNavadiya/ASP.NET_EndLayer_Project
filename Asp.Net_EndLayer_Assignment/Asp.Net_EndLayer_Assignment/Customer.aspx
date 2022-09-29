@@ -47,23 +47,23 @@
                     </div>
                 </div>
             </div>
-            <br />  
+            <br />
             <%--HTML FOR BUTTON--%>
-            <div class="col-sm-6 form-group m-2">
-                <asp:Panel Visible="true" ID="SubmitButton" runat="server">
-                    <asp:Button CssClass="btn btn-primary col-md-3" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click"
-                        Text="Submit" Style="font-size: larger"></asp:Button>
-                </asp:Panel>
-            </div>
-            <div class="col-sm-6 form-group m-2">
-                <asp:Panel Visible="false" ID="UpdateButton" runat="server">
-                    <asp:Button CssClass="btn btn-success col-md-3" ID="btnUpdate" runat="server" OnClick="btnUpdate_Click"
-                        Text="Update" Style="font-size: larger"></asp:Button>
-                </asp:Panel>
-            </div>
-            <div class="col-sm-6 m-2">
-                <asp:Button CssClass="btn btn-danger col-md-3" ID="btnCancel" runat="server" OnClick="btnCancel_Click"
-                    Text="Cancel" Style="font-size: larger"></asp:Button>
+            <div class="row col-6">
+                <div class="col-sm-6">
+                    <asp:Panel Visible="true" ID="SubmitButton" runat="server">
+                        <asp:Button CssClass="btn btn-primary col-md-6" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click"
+                            Text="Submit" Style="font-size: larger"></asp:Button>
+                    </asp:Panel>
+                    <asp:Panel Visible="false" ID="UpdateButton" runat="server">
+                        <asp:Button CssClass="btn btn-success col-md-6" ID="btnUpdate" runat="server" OnClick="btnUpdate_Click"
+                            Text="Update" Style="font-size: larger"></asp:Button>
+                    </asp:Panel>
+                </div>
+                <div class="col-sm-6 text-left" style="margin-left: -5.5em">
+                    <asp:Button CssClass="btn btn-danger col-md-6" ID="btnCancel" runat="server" OnClick="btnCancel_Click"
+                        Text="Cancel" Style="font-size: larger"></asp:Button>
+                </div>
             </div>
 
 
@@ -72,7 +72,7 @@
             <br />
             <div class="table-responsive">
                 <asp:GridView ID="gvCustomer" runat="server" class="table" AllowPaging="True" AllowSorting="True"
-                    AutoGenerateColumns="False" CellPadding="4" DataKeyNames="customer_id" DataSourceID="CustomerDataSource" 
+                    AutoGenerateColumns="False" CellPadding="4" DataKeyNames="customer_id" DataSourceID="CustomerDataSource"
                     ForeColor="#333333" GridLines="None">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
@@ -83,8 +83,8 @@
                         <asp:BoundField DataField="salesman_id" HeaderText="Salesman ID" SortExpression="salesman_id" />
                         <asp:TemplateField HeaderText="Action">
                             <ItemTemplate>
-                                <asp:Button ID="btnEdit" CssClass="btn btn-success" Text="Update" runat="server" OnClick="btnEdit_Click"/>
-                                <asp:Button ID="btnDelete"  CssClass="btn btn-danger" Text="Delete" runat="server" OnClick="btnDelete_Click"/>
+                                <asp:Button ID="btnEdit" CssClass="btn btn-success" Text="Update" runat="server" OnClick="btnEdit_Click" />
+                                <asp:Button ID="btnDelete" CssClass="btn btn-danger" Text="Delete" runat="server" OnClick="btnDelete_Click" />
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

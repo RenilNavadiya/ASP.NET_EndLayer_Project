@@ -2,7 +2,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
+    <br />
+    <h2 class="lable">Enter Customer</h2>
+    <br />
     <asp:AdRotator ID="AdRotator1" runat="server" />
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
@@ -36,43 +38,41 @@
                             DataValueField="customer_id">
                             <asp:ListItem Text="----- SELECT ONE -----" Value="" />
                         </asp:DropDownList>
+                        <asp:SqlDataSource ID="CustomerIdDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:InventoryConnectionString %>" SelectCommand="SELECT [customer_id] FROM [customer]"></asp:SqlDataSource>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="SalesmanId" class="col-sm-2 col-form-label ">Salesman ID:</label>
                     <div class="col-sm-5">
-                        <asp:DropDownList ID="ddlSalesmanId" class="form-select" runat="server" DataSourceID="SalesmanIdDataSource" AppendDataBoundItems="true" DataTextField="salesman_id"
+                        <asp:DropDownList ID="ddlSalesmanId" class="form-select" CssClass="" runat="server" DataSourceID="SalesmanIdDataSource" AppendDataBoundItems="true" DataTextField="salesman_id"
                             DataValueField="salesman_id">
                             <asp:ListItem Text="----- SELECT ONE -----" Value="" />
                         </asp:DropDownList>
+                        <asp:SqlDataSource ID="SalesmanIdDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:InventoryConnectionString %>" SelectCommand="SELECT [salesman_id] FROM [salesman]"></asp:SqlDataSource>
                     </div>
                 </div>
             </div>
             <br />
             <%--HTML FOR BUTTON--%>
-            <div class="col-sm-6 form-group m-2">
-                <asp:Panel Visible="true" ID="SubmitButton" runat="server">
-                    <asp:Button CssClass="btn btn-primary col-md-3" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click"
-                        Text="Submit" Style="font-size: larger"></asp:Button>
-                </asp:Panel>
+            <div class="row col-6">
+                <div class="col-sm-6">
+                    <asp:Panel Visible="true" ID="SubmitButton" runat="server">
+                        <asp:Button CssClass="btn btn-primary col-md-6" ID="btnSubmit" runat="server" OnClick="btnSubmit_Click"
+                            Text="Submit" Style="font-size: larger"></asp:Button>
+                    </asp:Panel>
+                    <asp:Panel Visible="false" ID="UpdateButton" runat="server">
+                        <asp:Button CssClass="btn btn-success col-md-6" ID="btnUpdate" runat="server" OnClick="btnUpdate_Click"
+                            Text="Update" Style="font-size: larger"></asp:Button>
+                    </asp:Panel>
+                </div>
+                <div class="col-sm-6 text-left" style="margin-left: -5.5em">
+                    <asp:Button CssClass="btn btn-danger col-md-6" ID="btnCancel" runat="server" OnClick="btnCancel_Click"
+                        Text="Cancel" Style="font-size: larger"></asp:Button>
+                </div>
             </div>
-            <div class="col-sm-6 form-group m-2">
-                <asp:Panel Visible="false" ID="UpdateButton" runat="server">
-                    <asp:Button CssClass="btn btn-success col-md-3" ID="btnUpdate" runat="server" OnClick="btnUpdate_Click"
-                        Text="Update" Style="font-size: larger"></asp:Button>
-                </asp:Panel>
-            </div>
-            <div class="col-sm-6 m-2">
-                <asp:Button CssClass="btn btn-danger col-md-3" ID="btnCancel" runat="server" OnClick="btnCancel_Click"
-                    Text="Cancel" Style="font-size: larger"></asp:Button>
-            </div>
+
 
             <asp:ScriptManager ID="ScriptManager1" runat="server" />
-
-            <asp:SqlDataSource ID="SalesmanIdDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:InventoryConnectionString %>" SelectCommand="SELECT [salesman_id] FROM [salesman]"></asp:SqlDataSource>
-
-            <asp:SqlDataSource ID="CustomerIdDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:InventoryConnectionString %>" SelectCommand="SELECT [customer_id] FROM [customer]"></asp:SqlDataSource>
-
             <br />
 
             <h2 class="lable">Existing Orders</h2>
@@ -82,7 +82,6 @@
                     DataKeyNames="order_no" DataSourceID="OrdersDataSource" GridLines="None" ForeColor="#333333">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-
                         <asp:BoundField DataField="order_no" HeaderText="Order Number" ReadOnly="True" SortExpression="order_no" />
                         <asp:BoundField DataField="purch_amt" HeaderText="Purchase Amount" SortExpression="purch_amt" />
                         <asp:BoundField DataField="ord_date" HeaderText="Order Date" SortExpression="ord_date" />
